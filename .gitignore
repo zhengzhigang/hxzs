@@ -1,0 +1,40 @@
+*.class
+.idea
+*.iml
+build
+.logs
+npm-debug.log.*
+.gradle
+.DS_Store
+npm-debug.log
+*.*sinapayConfig.yml
+*sinapayConfig-local.yml
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+palette.map
+stacks.svg
+node_modules/
+.tern-port
+target/
+classes/
+*.swp
+dump.sql
+config.dev.json
+application-local.yml
+config.production.json
+dist/
+application.yml
+main/main-grpc/src/main/resources/application.yml
+package-lock.json
+lerna-debug.log
+yarn-error.log
+.sass-cache
+.config
