@@ -1,0 +1,30 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 42px 15px 43px 15px;
+    background-color: #f2f2f2;
+    .footer-list {
+        a {
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 0;
+            line-height: 12px;
+            text-align: center;
+            padding: 0 10px;
+            &:not(:nth-child(1)) {
+                border-left: 1px solid #e4e4e4;
+            }
+        }
+    }
+    .copyright {
+        padding: 12px 0;
+    }
+    .copyright, .state {
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+        text-align: center;
+    }
+}
