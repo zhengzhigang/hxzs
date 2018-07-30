@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './main.css';
-import PcModal from '../components/modal/pcModal';
+import { Button, Carousel } from 'antd';
 
 export default class Main extends Component {
     constructor (props) {
@@ -9,16 +9,7 @@ export default class Main extends Component {
             showModal: false
         }
     }
-    openModal = () => {
-        this.setState({
-            showModal: true
-        });
-    }
-    closeModal = () => {
-        this.setState({
-            showModal: false
-        });
-    }
+
     render () {
         const modalStyle = {
             title: {
@@ -32,13 +23,16 @@ export default class Main extends Component {
         }
         return (
             <div id="main" className="content">
-                <p onClick={this.openModal}>打开Modal</p>
-                <PcModal show={this.state.showModal} close={this.closeModal}>
-                    <div style={modalStyle.title}>这里是Modal的title</div>
-                    <div style={modalStyle.content}>
-                        
-                    </div>
-                </PcModal>
+                <Carousel autoplay>
+                    <div><img style={{display:'block', height:400, margin:'auto'}} src={require('../../images/baner-01.jpeg')}/></div>
+                    <div><img style={{display:'block', height:400, margin:'auto'}} src={require('../../images/baner-02.jpeg')}/></div>
+                    <div><img style={{display:'block', height:400, margin:'auto'}} src={require('../../images/baner-03.jpeg')}/></div>
+                    <div><img style={{display:'block', height:400, margin:'auto'}} src={require('../../images/baner-04.jpeg')}/></div>
+                    <div><img style={{display:'block', height:400, margin:'auto'}} src={require('../../images/baner-05.jpeg')}/></div>
+                    <div><img style={{display:'block', height:400, margin:'auto'}} src={require('../../images/baner-06.jpeg')}/></div>
+                    <div><img style={{display:'block', height:400, margin:'auto'}} src={require('../../images/baner-07.jpeg')}/></div>
+                </Carousel>
+                <Button type="primary">button</Button>
             </div>
         );
     }

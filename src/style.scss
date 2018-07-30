@@ -57,7 +57,6 @@ a {
     box-sizing: border-box;
     font-size: 14px;
     font-family: "Microsoft YaHei", 微软雅黑, PingFangSC-Regular, "Verdana", "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu;
-    color: #333;
 }
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -66,9 +65,14 @@ body {
     color: #333;
     background-color: #fff;
     width: 100%;
+    height: auto!important;
     min-height: 100%;
     position: absolute;
     padding-bottom: 161px;
+}
+html {
+    height: auto!important;
+    min-height: 100%;
 }
  .clearfix:after {
      display:block;

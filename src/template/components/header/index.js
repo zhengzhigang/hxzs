@@ -6,7 +6,9 @@ export default class Header extends Component {
         return (
             <header className="header-wrapper">
                 <nav className="nav clearfix">
-                    <a href="/" className="logo">LOGO</a>
+                    <a href="/" className="logo">
+                        <img src={require('../../../images/logo.jpeg')} style={{height: 50, verticalAlign: 'top', marginTop: 5}}/>
+                    </a>
                     <ul className="nav-list clearfix" >
                         <li><a href="">首页</a></li>
                         <li><a href="">找灵感</a></li>
