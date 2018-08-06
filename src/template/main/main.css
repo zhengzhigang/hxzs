@@ -1,5 +1,19 @@
 .content {
   width: 100%;
-  max-width: 1180px;
-  margin: auto;
-  padding-top: 40px; }
+  max-width: 1196px;
+  margin: auto; }
+  .content .main-block {
+    margin: 20px auto 40px auto;
+    text-align: center; }
+    .content .main-block .block-title {
+      font-size: 24px; }
+    .content .main-block .block-content {
+      font-size: 14px;
+      line-height: 1.6; }
+  .content .text-block {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto; }
+
+.ant-carousel .slick-list {
+  width: 100%; }

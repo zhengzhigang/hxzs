@@ -1,6 +1,27 @@
 .content {
     width: 100%;
-    max-width: 1180px;
+    max-width: 1196px;
     margin: auto;
-    padding-top: 40px;
+    .main-block {
+        margin: 20px auto 40px auto;
+        text-align: center;
+        .block-title {
+            font-size: 24px;
+        }
+        .block-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    }
+    .text-block {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.ant-carousel {
+    .slick-list {
+        width: 100%;
+    }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {BackTop} from 'antd';
 import logo from './logo.svg';
 import './style.css';
 // import './App.css';
@@ -13,6 +14,7 @@ class App extends Component {
         <Header></Header>
         <Main></Main>
         <Footer></Footer>
+        <BackTop />
       </div>
     );
   }
