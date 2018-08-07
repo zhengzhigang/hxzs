@@ -1,11 +1,14 @@
 .content {
   width: 100%;
-  max-width: 1196px;
-  margin: auto; }
+  padding-bottom: 20px; }
+  .content .main-content {
+    width: 1196px;
+    margin: auto; }
   .content .main-block {
     margin: 20px auto 40px auto;
     text-align: center; }
     .content .main-block .block-title {
+      margin-bottom: 10px;
       font-size: 24px; }
     .content .main-block .block-content {
       font-size: 14px;
@@ -14,6 +17,22 @@
     width: 960px;
     margin-left: auto;
     margin-right: auto; }
+  .content .address-block {
+    width: 500px; }
+  .content .img-block .img-block-item {
+    padding: 0 5px;
+    overflow: hidden; }
+    .content .img-block .img-block-item .img-title {
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333; }
+    .content .img-block .img-block-item .img-explain {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #555; }
+    .content .img-block .img-block-item img {
+      width: 100%; }
 
 .ant-carousel .slick-list {
   width: 100%; }

@@ -1,11 +1,15 @@
 .content {
     width: 100%;
-    max-width: 1196px;
-    margin: auto;
+    padding-bottom: 20px;
+    .main-content {
+        width: 1196px;
+        margin: auto;
+    }
     .main-block {
         margin: 20px auto 40px auto;
         text-align: center;
         .block-title {
+            margin-bottom: 10px;
             font-size: 24px;
         }
         .block-content {
@@ -17,6 +21,29 @@
         width: 960px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .address-block {
+        width: 500px;
+    }
+    .img-block {
+        .img-block-item {
+            padding: 0 5px;
+            overflow: hidden;
+            .img-title {
+                margin-bottom: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+            }
+            .img-explain {
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: #555;
+            }
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
