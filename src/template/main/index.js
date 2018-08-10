@@ -9,13 +9,41 @@ export default class Main extends Component {
             showModal: false
         }
     }
-
     render () {
-        function a(value) {
-            var a =  Object.prototype.toString.call(value);
-            return a;
+        function  compare_version(v1, v2) {
+            // 比较原则：数字 > 字母; b > a; 1.2.3a > 1.2.3;
+            var reg_number = /^[0-9]*$/;      // 匹配数字
+            var reg_letter = /^[a-zA-Z]*$/;   // 匹配字母
+            var length = v1.length < v2.length ? v1.length : v2.length;
+            for (var i = 0; i < length; i++) {
+                if (v1[i] && v2[i] && reg_number.test(v1[i]) && reg_number.test(v2[i])) { // 当前位是数字
+                    if (Number(v1[i]) === Number(v2[i]) && i == length - 1) {
+                        return v1.length < v2.length ? v2 : v1;
+                    }
+                    if (Number(v1[i]) != Number(v2[i])) {
+                        return Number(v1[i]) > Number(v2[i]) ? v1 : v2;
+                    }
+                } 
+                if (v1[i] && v2[i] && reg_letter.test(v1[i]) && reg_letter.test(v2[i])) { // 当前位是字母
+                    var v1_letter = v1[i].charCodeAt();
+                    var v2_letter = v2[i].charCodeAt();
+                    if (v1_letter === v2_letter && i == length - 1) {
+                        return v1.length < v2.length ? v2 : v1;
+                    }
+                    if (v1_letter != v2_letter) {
+                        return v1_letter > v2_letter ? v1 : v2;
+                    }
+                }
+                if (reg_number.test(v1[i]) && reg_letter.test(v2[i])) {
+                    return v1;
+                }
+                if (reg_number.test(v2[i]) && reg_letter.test(v1[i])) {
+                    return v2;
+                }
+            }
         }
-        console.log(a(1))
+        var big_version = compare_version('1.2.3a', '1.2.4b');
+        console.log(big_version)
         return (
             <div id="main" className="content">
                 <Carousel autoplay>
