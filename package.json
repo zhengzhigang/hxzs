@@ -2,6 +2,7 @@
   "name": "hxzs",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "antd": "^3.7.2",
     "node-sass-chokidar": "^1.3.0",

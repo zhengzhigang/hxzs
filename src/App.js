@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BackTop} from 'antd';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './style.css';
 // import './App.css';
 import Header from './template/components/header';

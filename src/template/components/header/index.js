@@ -9,7 +9,7 @@ export default class Header extends Component {
                 <header className="header-wrapper">
                     <nav className="nav clearfix">
                         <a href="/" className="logo">
-                            <img src={require('../../../images/logo.jpeg')} style={{height: 50, verticalAlign: 'top', marginTop: 5}}/>
+                            <img src={require('../../../images/logo.jpeg')} style={{height: 50, verticalAlign: 'top', marginTop: 5}} alt="logo"/>
                         </a>
                         <ul className="nav-list clearfix" >
                             <li><a href="">首页</a></li>

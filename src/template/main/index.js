@@ -17,20 +17,20 @@ export default class Main extends Component {
             var length = v1.length < v2.length ? v1.length : v2.length;
             for (var i = 0; i < length; i++) {
                 if (v1[i] && v2[i] && reg_number.test(v1[i]) && reg_number.test(v2[i])) { // 当前位是数字
-                    if (Number(v1[i]) === Number(v2[i]) && i == length - 1) {
+                    if (Number(v1[i]) === Number(v2[i]) && i === length - 1) {
                         return v1.length < v2.length ? v2 : v1;
                     }
-                    if (Number(v1[i]) != Number(v2[i])) {
+                    if (Number(v1[i]) !== Number(v2[i])) {
                         return Number(v1[i]) > Number(v2[i]) ? v1 : v2;
                     }
                 } 
                 if (v1[i] && v2[i] && reg_letter.test(v1[i]) && reg_letter.test(v2[i])) { // 当前位是字母
                     var v1_letter = v1[i].charCodeAt();
                     var v2_letter = v2[i].charCodeAt();
-                    if (v1_letter === v2_letter && i == length - 1) {
+                    if (v1_letter === v2_letter && i === length - 1) {
                         return v1.length < v2.length ? v2 : v1;
                     }
-                    if (v1_letter != v2_letter) {
+                    if (v1_letter !== v2_letter) {
                         return v1_letter > v2_letter ? v1 : v2;
                     }
                 }
@@ -47,14 +47,14 @@ export default class Main extends Component {
         return (
             <div id="main" className="content">
                 <Carousel autoplay>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-001.jpeg')}/></div>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-002.jpeg')}/></div>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-003.jpeg')}/></div>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-004.jpeg')}/></div>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-005.jpeg')}/></div>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-006.jpeg')}/></div>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-007.jpeg')}/></div>
-                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-008.jpeg')}/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-001.jpeg')} alt="图片"/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-002.jpeg')} alt="图片"/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-003.jpeg')} alt="图片"/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-004.jpeg')} alt="图片"/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-005.jpeg')} alt="图片"/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-006.jpeg')} alt="图片"/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-007.jpeg')} alt="图片"/></div>
+                    <div><img style={{display:'block', width: '100%',  margin:'auto'}} src={require('../../images/banner-008.jpeg')} alt="图片"/></div>
                 </Carousel>
                 <div className="main-content">
                     <Row>
